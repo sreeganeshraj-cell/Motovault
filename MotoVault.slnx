@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MotoVault.API/MotoVault.API.csproj" />
+    <Project Path="src/MotoVault.Application/MotoVault.Application.csproj" />
+    <Project Path="src/MotoVault.Domain/MotoVault.Domain.csproj" />
+    <Project Path="src/MotoVault.Infrastructure/MotoVault.Infrastructure.csproj" />
+  </Folder>
+</Solution>
