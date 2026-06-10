@@ -5,4 +5,7 @@
     <Project Path="src/MotoVault.Domain/MotoVault.Domain.csproj" />
     <Project Path="src/MotoVault.Infrastructure/MotoVault.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MotoVault.Application.Tests/MotoVault.Application.Tests.csproj" />
+  </Folder>
 </Solution>

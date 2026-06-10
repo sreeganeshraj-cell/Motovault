@@ -8,6 +8,7 @@ public interface IStorageSlotRepository
     Task<StorageSlot?> GetByIdAsync(Guid id);
     Task<IEnumerable<StorageSlot>> GetAllAsync();
     Task<IEnumerable<StorageSlot>> GetAvailableByTypeAsync(VehicleType type);
+    Task<int> CountByTypeAsync(VehicleType type);
     Task AddAsync(StorageSlot slot);
     Task UpdateAsync(StorageSlot slot);
 }

@@ -14,8 +14,14 @@ public class CreateStorageSlotCommandHandler : IRequestHandler<CreateStorageSlot
         _slotRepository = slotRepository;
     }
 
+    private const int MaxSlotsPerType = 15;
+
     public async Task<StorageSlotResponse> Handle(CreateStorageSlotCommand request, CancellationToken cancellationToken)
     {
+        var existingCount = await _slotRepository.CountByTypeAsync(request.Type);
+        if (existingCount >= MaxSlotsPerType)
+            throw new InvalidOperationException($"Maximum {MaxSlotsPerType} {request.Type} slots already exist.");
+
         var slot = StorageSlot.Create(request.SlotNumber, request.Type);
 
         await _slotRepository.AddAsync(slot);

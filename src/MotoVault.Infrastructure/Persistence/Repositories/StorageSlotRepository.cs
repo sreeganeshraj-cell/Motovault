@@ -35,6 +35,13 @@ public class StorageSlotRepository : IStorageSlotRepository
             .ToListAsync();
     }
 
+    public async Task<int> CountByTypeAsync(VehicleType type)
+    {
+        return await _context.StorageSlots
+            .AsNoTracking()
+            .CountAsync(s => s.Type == type);
+    }
+
     public async Task AddAsync(StorageSlot slot)
     {
         await _context.StorageSlots.AddAsync(slot);
