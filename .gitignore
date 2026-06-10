@@ -35,6 +35,9 @@ db/*.dump
 *.db
 *.sqlite
 
+# ── MCP / Claude Code ─────────────────────────────────
+.mcp.json
+
 # ── OS & editors ──────────────────────────────────────
 .DS_Store
 Thumbs.db

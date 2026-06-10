@@ -34,6 +34,7 @@ public static class InfrastructureExtensions
 
         services.AddScoped<IPasswordHasher, BcryptPasswordHasher>();
         services.AddScoped<IJwtTokenService, JwtTokenService>();
+        services.AddScoped<IFileService, FileService>();
         services.AddScoped<AdminSeeder>();
         services.AddScoped<SampleDataSeeder>();
 
